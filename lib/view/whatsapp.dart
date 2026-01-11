@@ -16,6 +16,7 @@ class _whatsappState extends State<whatsapp> {
       length: 5,
       child: Scaffold(
         bottomNavigationBar: TabBar(
+          
           indicatorColor: Colors.white,
           unselectedLabelColor: Colors.grey,
           labelColor: Colors.green,
@@ -43,9 +44,10 @@ class _whatsappState extends State<whatsapp> {
             // ]),
             Expanded(
               child: TabBarView(
+                
                 children: [
-                  chat(),
                   community(),
+                  chat(),
                   Container(color: Colors.blue),
                   Container(color: Colors.brown),
                   Container(color: Colors.black),

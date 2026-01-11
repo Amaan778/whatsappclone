@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsap/model/Basemodeal.dart';
+import 'package:whatsap/model/imagess.dart';
+import 'package:whatsap/view/fullimg.dart';
 
 class community extends StatefulWidget {
   const community({super.key});
@@ -103,6 +105,25 @@ class _communityState extends State<community> {
     ),
   ];
 
+  List<imagess> ofimg = [
+    imagess(
+      img1:
+          "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?_gl=1*v4ujhb*_ga*MjEzOTE3NzczOC4xNzY3Njg1Nzgy*_ga_8JE65Q40S6*czE3NjgwMjYxMDEkbzIkZzAkdDE3NjgwMjYxMDEkajYwJGwwJGgw",
+    ),
+    imagess(
+      img1:
+          "https://images.pexels.com/photos/35581413/pexels-photo-35581413.jpeg?_gl=1*c8o9d9*_ga*MjEzOTE3NzczOC4xNzY3Njg1Nzgy*_ga_8JE65Q40S6*czE3NjgxMzE2NDYkbzMkZzEkdDE3NjgxMzE2ODAkajI2JGwwJGgw",
+    ),
+    imagess(
+      img1:
+          "https://images.pexels.com/photos/35464095/pexels-photo-35464095.jpeg?_gl=1*1hyrant*_ga*MjEzOTE3NzczOC4xNzY3Njg1Nzgy*_ga_8JE65Q40S6*czE3NjgxMzE2NDYkbzMkZzEkdDE3NjgxMzE3MTEkajYwJGwwJGgw",
+    ),
+    imagess(
+      img1:
+          "https://images.pexels.com/photos/35494869/pexels-photo-35494869.jpeg?_gl=1*k1at5m*_ga*MjEzOTE3NzczOC4xNzY3Njg1Nzgy*_ga_8JE65Q40S6*czE3NjgxMzE2NDYkbzMkZzEkdDE3NjgxMzE2OTQkajEyJGwwJGgw",
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,18 +140,28 @@ class _communityState extends State<community> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                for (int i = 0; i < ofdata.length; i++) ...{
-                  Padding(padding: EdgeInsetsGeometry.all(10),
-                  child:  Container(
-                    width: 50,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(ofdata[i].imges),
-                        fit: BoxFit.cover,
+                for (int i = 0; i < ofimg.length; i++) ...{
+                  Padding(
+                    padding: EdgeInsetsGeometry.all(10),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => fullimg(image: ofimg[i].img1,)),
+                        );
+                      },
+                      child: Container(
+                        width: 50,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(ofimg[i].img1),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
                     ),
-                  ),)
+                  ),
                 },
               ],
             ),

@@ -28,14 +28,14 @@ class _SettingState extends State<Setting> {
                       radius: 10,
                       child: Center(
                         child: Text(
-                          "setti",
+                          "settings",
+
+                          
                           style: TextStyle(color: Colors.white, fontSize: 12),
                         ),
                       ),
                     ),
                     subtitle: Text("aaa"),
-
-                    
               )
             ],
           //   ListTile(

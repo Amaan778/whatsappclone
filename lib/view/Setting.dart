@@ -29,9 +29,9 @@ class _SettingState extends State<Setting> {
                       child: Center(
                         child: Text(
                           "settings",
+                          style: TextStyle(color: Colors.white, fontSize: 12),
 
                           
-                          style: TextStyle(color: Colors.white, fontSize: 12),
                         ),
                       ),
                     ),

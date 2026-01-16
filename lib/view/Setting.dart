@@ -30,9 +30,9 @@ class _SettingState extends State<Setting> {
                         child: Text(
                           "settings",
                           style: TextStyle(color: Colors.white, fontSize: 12),
-
-                          
                         ),
+
+                        
                       ),
                     ),
                     subtitle: Text("aaa"),

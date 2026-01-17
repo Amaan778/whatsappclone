@@ -31,8 +31,6 @@ class _SettingState extends State<Setting> {
                           "settings",
                           style: TextStyle(color: Colors.white, fontSize: 12),
                         ),
-
-                        
                       ),
                     ),
                     subtitle: Text("aaa"),

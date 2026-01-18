@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsap/view/Setting.dart';
 import 'package:whatsap/view/chat.dart';
 import 'package:whatsap/view/community.dart';
 
@@ -50,7 +51,7 @@ class _whatsappState extends State<whatsapp> {
                   chat(),
                   Container(color: Colors.blue),
                   Container(color: Colors.brown),
-                  Container(color: Colors.black),
+                  Setting(),
                 ],
               ),
             ),

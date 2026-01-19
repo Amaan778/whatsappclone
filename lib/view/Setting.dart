@@ -48,6 +48,8 @@ class _SettingState extends State<Setting> {
                 num = val;
                 setState(() {});
               },
+
+              
             ),
             ListTile(
               onTap: () async {
